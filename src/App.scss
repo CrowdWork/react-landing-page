@@ -1,3 +1,5 @@
+$secondary: #32a84a;
+
 .App {
   text-align: center;
 }
@@ -25,7 +27,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: $secondary;
 }
 
 @keyframes App-logo-spin {
