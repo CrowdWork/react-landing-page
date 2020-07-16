@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Donate />
+      <Contribute />
     </div>
   );
 }
