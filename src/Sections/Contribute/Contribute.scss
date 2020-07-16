@@ -1,2 +1,24 @@
 @import "../../mixins.scss";
 @import "../../variables.scss";
+
+.contribute {
+  box-shadow: $shadow;
+  @include flex(center, center, row);
+  margin: 20px 0;
+  .container {
+    width: 1000px;
+    height: 100%;
+    @include flex(space-around, center, row);
+    .column {
+      min-height: 600px;
+    }
+    .contributors {
+      width: 25%;
+      background-color: rgba(0, 0, 0, 0.611);
+    }
+    .comments {
+      background-color: rgba(255, 255, 255, 0.673);
+      width: 45%;
+    }
+  }
+}

@@ -33,7 +33,10 @@ export default class Form extends Component {
 
   render() {
     return (
-      <form autoComplete={this.state.autoComplete} className="comment-form">
+      <form
+        autoComplete={this.state.autoComplete}
+        className="comment-form column"
+      >
         <h3>ADD A COMMENT</h3>
         <label htmlFor="name" className="form-text">
           {" "}
