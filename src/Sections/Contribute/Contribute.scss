@@ -13,12 +13,32 @@
       min-height: 600px;
     }
     .contributors {
+      @include flex(flex-start, flex-start, column);
       width: 25%;
       background-color: rgba(0, 0, 0, 0.611);
+      padding: 15px;
+      h2 {
+        color: orange;
+        margin-bottom: 20px;
+        border-left: 2px solid yellow;
+      }
+      h2,
+      em {
+        padding-left: 20px;
+      }
+      em {
+        color: white;
+      }
     }
     .comments {
       background-color: rgba(255, 255, 255, 0.673);
       width: 45%;
+      .sad-face {
+        height: 50px;
+        width: 50px;
+        margin: 30px 0;
+      }
+      @include flex(flex-start, center, column);
     }
   }
 }

@@ -12,11 +12,11 @@ a {
 .App {
   // background-color: #736020;
   .image-overlay {
-    @include background(cover, 120% 10%);
+    @include background(cover, 50% 10%);
     background-image: url("./Images/grocery_crowdwork_overlay.jpg");
     background-attachment: fixed;
     .color-overlay {
-      background-color: rgba(75, 42, 1, 0.426);
+      background-color: rgba(75, 54, 1, 0.639);
     }
   }
 }
