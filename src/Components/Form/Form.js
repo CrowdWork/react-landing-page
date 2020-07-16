@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Form.scss";
+import Check from "../../Images/check.svg";
 
 export default class Form extends Component {
   constructor(props) {
@@ -32,8 +33,9 @@ export default class Form extends Component {
 
   render() {
     return (
-      <form autoComplete={this.state.autoComplete}>
-        <label htmlFor="name" className="form-name">
+      <form autoComplete={this.state.autoComplete} className="comment-form">
+        <h3>ADD A COMMENT</h3>
+        <label htmlFor="name" className="form-text">
           {" "}
           Name
           <input
@@ -41,9 +43,10 @@ export default class Form extends Component {
             name="name"
             placeholder="Your Name"
             onChange={this.handleChange}
+            required="required"
           ></input>
         </label>
-        <label htmlFor="email" className="form-email">
+        <label htmlFor="email" className="form-text">
           {" "}
           Email
           <input
@@ -51,9 +54,10 @@ export default class Form extends Component {
             name="email"
             placeholder="Your Email"
             onChange={this.handleChange}
+            required="required"
           ></input>
         </label>
-        <label htmlFor="message" className="form-message">
+        <label htmlFor="message" className="form-text">
           {" "}
           Your Message
           <textarea
@@ -61,19 +65,28 @@ export default class Form extends Component {
             name="message"
             placeholder="Enter message"
             onChange={this.handleChange}
+            required="required"
           ></textarea>
         </label>
         <label htmlFor="autofill" className="form-checkbox">
-          {" "}
-          Save my name, email, and website in this browser for the next time I
-          comment.
           <input
             type="checkbox"
             name="autofill"
             onChange={this.handleCheck}
+            className="checkmark"
           ></input>
+          <span className="checkmark purple-check">
+            {" "}
+            <img src={Check} alt="checkmark"></img>
+          </span>
+          Save my name, email, and website in this browser for the next time I
+          comment.
         </label>
-        <button type="submit" onSubmit={this.handleSubmit}>
+        <button
+          type="submit"
+          onSubmit={this.handleSubmit}
+          className="submit-btn"
+        >
           Submit Comment
         </button>
       </form>
