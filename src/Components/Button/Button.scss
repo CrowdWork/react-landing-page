@@ -3,11 +3,11 @@
 
 .button {
   display: block;
-  width: 90%;
+  width: 80%;
   border-radius: $rounded-radius;
   color: white;
   font-weight: 600;
-  height: 50px;
+  height: 45px;
   overflow: hidden;
 }
 
@@ -33,13 +33,16 @@
 }
 
 .social-icon {
-  width: 15%;
+  width: 20%;
   height: 100%;
   @include flex(center, center, row);
 }
+ion-icon {
+  font-size: 20px;
+}
 .social-name {
-  width: 85%;
-  padding-left: 10px;
+  width: 80%;
+  padding-left: 15px;
 }
 
 .facebook-btn {
