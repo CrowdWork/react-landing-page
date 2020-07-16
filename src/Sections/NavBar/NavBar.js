@@ -8,6 +8,7 @@ const NavBar = (props) => {
         className="link-container"
         href="https://communitygrocerycooperative.wordpress.com/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         &#8592; BACK TO HOME
       </a>

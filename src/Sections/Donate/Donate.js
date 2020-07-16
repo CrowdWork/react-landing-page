@@ -9,7 +9,7 @@ const Donate = (props) => {
       <div className="container">
         <div className="column first">
           <div className="logo-container">
-            <img src={cgcLogo}></img>
+            <img src={cgcLogo} alt="CGC Logo"></img>
           </div>
           <p>
             <strong>
