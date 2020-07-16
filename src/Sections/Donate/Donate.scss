@@ -1,0 +1,72 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.donate {
+  box-shadow: $shadow;
+  @include flex(center, center, row);
+  .container {
+    width: 1000px;
+    @include flex(space-around, center, row);
+    .column {
+      background-color: white;
+      min-height: 420px;
+      width: 33.3333%;
+      p {
+        text-align: center;
+      }
+    }
+    .first {
+      @include flex(center, center, column);
+      .logo-container {
+        width: 90%;
+        img {
+          width: 100%;
+        }
+      }
+      p {
+        strong {
+          font-weight: 700;
+        }
+        width: 80%;
+        font-weight: 600;
+        transform: translateY(-50%);
+      }
+    }
+    .second {
+      @include flex(space-evenly, flex-start, column);
+      .goal {
+        span {
+          color: #24a45a;
+        }
+      }
+      .amount-text {
+        color: #c00808;
+      }
+      .amount-value {
+        background-color: rgba(0, 0, 0, 0.32);
+        height: 50px;
+        width: 90%;
+        border-radius: $rounded-radius;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.8;
+        span {
+          color: red;
+        }
+      }
+    }
+    .third {
+      padding: 10px 0;
+      background-color: black;
+      @include flex(space-around, center, column);
+      h2 {
+        padding-left: 10px;
+        width: 80%;
+        color: white;
+        border-left: 2px yellow solid;
+      }
+    }
+  }
+}
