@@ -37,11 +37,31 @@ const Donate = (props) => {
         <div className="column third">
           <h2>Please Forward Along to Your Networks!</h2>
           <div className="social-container">
-            <Button type="Facebook" link="#" social />
-            <Button type="Email" link="#" social />
-            <Button type="Twitter" link="#" social />
-            <Button type="LinkedIn" link="#" social />
-            <Button type="WhatsApp" link="#" social />
+            <Button
+              type="Facebook"
+              link="https://www.facebook.com/sharer.php?u=https://campaigns.crowdwork.coop/community-grocery-cooperative"
+              social
+            />
+            <Button
+              type="Email"
+              link="mailto:?subject=Community Grocery Cooperative – Crowdfunding Campaigns&body=https://campaigns.crowdwork.coop/community-grocery-cooperative"
+              social
+            />
+            <Button
+              type="Twitter"
+              link="https://twitter.com/intent/tweet?text=https://campaigns.crowdwork.coop/community-grocery-cooperative"
+              social
+            />
+            <Button
+              type="LinkedIn"
+              link="https://www.linkedin.com/shareArticle?mini=true&url=https://campaigns.crowdwork.coop/community-grocery-cooperative&title=Community%20Grocery%20Cooperative%20%E2%80%93%20Crowdfunding%20Campaigns&summary=&source=https://campaigns.crowdwork.coop/community-grocery-cooperative"
+              social
+            />
+            <Button
+              type="WhatsApp"
+              link="https://api.whatsapp.com/send?text=*Community%20Grocery%20Cooperative%20%E2%80%93%20Crowdfunding%20Campaigns*https://campaigns.crowdwork.coop/community-grocery-cooperative"
+              social
+            />
           </div>
         </div>
       </div>

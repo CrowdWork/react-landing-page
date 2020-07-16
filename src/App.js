@@ -7,9 +7,13 @@ import Contribute from "./Sections/Contribute/Contribute.js";
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Donate />
-      <Contribute />
+      <div className="image-overlay">
+        <div className="color-overlay">
+          <NavBar />
+          <Donate />
+          <Contribute />
+        </div>
+      </div>
     </div>
   );
 }

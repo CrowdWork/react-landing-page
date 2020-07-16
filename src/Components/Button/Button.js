@@ -28,6 +28,8 @@ const Button = (props) => {
     <a
       className={classList}
       href={props.link}
+      target="_blank"
+      rel="noopener noreferrer"
       onMouseEnter={() => toggleHover(true)}
       onMouseLeave={() => toggleHover(false)}
     >
