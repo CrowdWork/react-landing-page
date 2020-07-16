@@ -35,12 +35,14 @@ const Donate = (props) => {
           </p>
         </div>
         <div className="column third">
-          <h2>Please Forward Along to Your Networks</h2>
-          <Button type="Facebook" link="#" social />
-          <Button type="Email" link="#" social />
-          <Button type="Twitter" link="#" social />
-          <Button type="LinkedIn" link="#" social />
-          <Button type="WhatsApp" link="#" social />
+          <h2>Please Forward Along to Your Networks!</h2>
+          <div className="social-container">
+            <Button type="Facebook" link="#" social />
+            <Button type="Email" link="#" social />
+            <Button type="Twitter" link="#" social />
+            <Button type="LinkedIn" link="#" social />
+            <Button type="WhatsApp" link="#" social />
+          </div>
         </div>
       </div>
     </div>

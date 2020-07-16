@@ -8,10 +8,6 @@ const Button = (props) => {
   let type = props.type.toLowerCase();
   classList += ` ${type}-btn`;
 
-  // if (props.social) {
-  //   classList += ` social`;
-  // }
-
   if (props.type === "Email") {
     icon = "mail-outline";
   } else {
