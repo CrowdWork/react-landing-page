@@ -1,4 +1,74 @@
-button {
-  width: 300px;
-  border: 1px solid black;
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.button {
+  display: block;
+  width: 90%;
+  border-radius: $rounded-radius;
+  color: white;
+  font-weight: 600;
+  height: 50px;
+  overflow: hidden;
+}
+
+.donate-btn {
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #c50101;
+  letter-spacing: 0.1rem;
+  box-shadow: $shadow;
+  @include flex(center, center, row);
+}
+.hover-overlay {
+  background-color: rgba(255, 255, 255, 0.125);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.social {
+  @include flex(flex-start, center, row);
+  height: 100%;
+  position: relative;
+  font-weight: 600;
+}
+
+.social-icon {
+  width: 15%;
+  height: 100%;
+  @include flex(center, center, row);
+}
+.social-name {
+  width: 85%;
+  padding-left: 10px;
+}
+
+.facebook-btn {
+  background-color: #3a5691;
+  .social-icon {
+    background-color: #3b5996;
+  }
+}
+.twitter-btn {
+  background-color: #1a9be7;
+  .social-icon {
+    background-color: #1ca2ef;
+  }
+}
+.email-btn {
+  background-color: #ea4335;
+  .social-icon {
+    background-color: #ff1500;
+  }
+}
+.linkedin-btn {
+  background-color: #0077b5;
+  .social-icon {
+    background-color: #0086ce;
+  }
+}
+.whatsapp-btn {
+  background-color: #1fae53;
+  .social-icon {
+    background-color: #25d36d;
+  }
 }

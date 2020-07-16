@@ -7,7 +7,7 @@ import Button from "./Components/Button/Button.js";
 function App() {
   return (
     <div className="App">
-      <Button type="Facebook" />
+      {/* <Button type="Donate" /> */}
       <NavBar />
       <Donate />
     </div>
