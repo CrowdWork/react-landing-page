@@ -47,30 +47,50 @@ ion-icon {
 
 .facebook-btn {
   background-color: #3a5691;
+  transition: 0.3s;
+  &:hover {
+    background-color: #3b5996;
+  }
   .social-icon {
     background-color: #3b5996;
   }
 }
 .twitter-btn {
   background-color: #1a9be7;
+  transition: 0.3s;
+  &:hover {
+    background-color: #1ca2ef;
+  }
   .social-icon {
     background-color: #1ca2ef;
   }
 }
 .email-btn {
   background-color: #ea4335;
+  transition: 0.3s;
+  &:hover {
+    background-color: #ff1500;
+  }
   .social-icon {
     background-color: #ff1500;
   }
 }
 .linkedin-btn {
   background-color: #0077b5;
+  transition: 0.3s;
+  &:hover {
+    background-color: #0086ce;
+  }
   .social-icon {
     background-color: #0086ce;
   }
 }
 .whatsapp-btn {
   background-color: #1fae53;
+  transition: 0.3s;
+  &:hover {
+    background-color: #25d36d;
+  }
   .social-icon {
     background-color: #25d36d;
   }
