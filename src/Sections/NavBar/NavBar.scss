@@ -3,7 +3,7 @@
 nav {
   font-family: "Roboto";
   font-weight: 800;
-  height: 100px;
+  height: 80px;
   color: white;
   @include flex(flex-start, center, row);
   .link-container {
@@ -18,7 +18,7 @@ nav {
     display: inline-block;
     padding: 16px 16px 16px 10px;
     background-color: rgba(0, 0, 0, 0.118);
-    border-radius: $bubble;
+    border-radius: $bubble-radius;
     box-shadow: $shadow;
   }
 }

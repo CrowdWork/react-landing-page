@@ -1,2 +1,37 @@
-.facebook {
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.donate {
+  box-shadow: $shadow;
+  @include flex(center, center, row);
+  .container {
+    width: 1000px;
+    @include flex(space-around, center, row);
+    .column {
+      background-color: white;
+      min-height: 400px;
+      width: 33.3333%;
+    }
+    .first {
+      @include flex(center, center, column);
+      .logo-container {
+        width: 90%;
+        img {
+          width: 100%;
+        }
+      }
+      p {
+        strong {
+          font-weight: 700;
+        }
+        width: 80%;
+        text-align: center;
+        font-weight: 600;
+        transform: translateY(-50%);
+      }
+    }
+    .third {
+      background-color: black;
+    }
+  }
 }
