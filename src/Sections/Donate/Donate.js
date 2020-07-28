@@ -2,10 +2,18 @@ import React from "react";
 import "./Donate.scss";
 import cgcLogo from "../../Images/Community-Grocery-Coop_Logo-1-e1592865232476.jpg";
 import Button from "../../Components/Button/Button.js";
+import Modal from "../../Components/Modal/Modal.js";
 
 const Donate = (props) => {
+  let raised = "";
+  let goal = "";
+
+  if (props.data.donation_details) {
+    goal = `$${props.data.donation_details.goal}`;
+    raised = `$${props.data.donation_details.amount_raised}`;
+  }
   return (
-    <div className="donate">
+    <section className="donate">
       <div className="container">
         <div className="column first">
           <div className="logo-container">
@@ -21,11 +29,14 @@ const Donate = (props) => {
         </div>
         <div className="column second">
           <h2 className="goal">
-            Goal: <span>$19,800</span>
+            Goal: <span>{goal ? goal : "$0"}</span>
           </h2>
           <h2 className="amount-text">Amount Raised</h2>
-          <div className="amount-value"></div>
-          <Button type="Donate" link="#" />
+          <div className="amount-value">
+            <p>{raised ? raised : "$0"}</p>
+          </div>
+          {/* <Button type="Donate" link="#" /> */}
+          <Modal campaign={props.data.post_title} />
           <p>
             <span>*</span>{" "}
             <strong>
@@ -65,7 +76,7 @@ const Donate = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

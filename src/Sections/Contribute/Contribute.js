@@ -5,7 +5,7 @@ import Sad from "../../Images/sad.svg";
 
 const Contribute = (props) => {
   return (
-    <div className="contribute">
+    <section className="contribute">
       <div className="container">
         <div className="contributors column">
           <h2>Contributors</h2>
@@ -15,13 +15,13 @@ const Contribute = (props) => {
         </div>
         <div className="comments column">
           <div className="sad-face">
-            <img src={Sad}></img>
+            <img src={Sad} alt="sad face"></img>
           </div>
           <p>No comments yet.</p>
         </div>
         <Form />
       </div>
-    </div>
+    </section>
   );
 };
 
