@@ -6,14 +6,14 @@
   margin: 0;
 }
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none !important;
+  color: inherit !important;
 }
 .App {
   // background-color: #736020;
   .image-overlay {
     @include background(cover, 50% 10%);
-    background-image: url("./Images/grocery_crowdwork_overlay.jpg");
+    // background-image: url("./Images/grocery_crowdwork_overlay.jpg");
     background-attachment: fixed;
     .color-overlay {
       background-color: rgba(75, 54, 1, 0.639);
