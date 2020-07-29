@@ -24,12 +24,12 @@ const About = (props) => {
       <div className="mission">
         <div className="mission-content">{mission}</div>
         <div className="mission-image">
-          <img src={mainImg}></img>
+          <img src={mainImg} alt="Campaign main image"></img>
         </div>
       </div>
       <div className="plan">
         <div className="plan-image">
-          <img src={secondImg}></img>
+          <img src={secondImg} alt="Campaign secondary image"></img>
         </div>
         <div className="plan-content">{plan}</div>
       </div>
