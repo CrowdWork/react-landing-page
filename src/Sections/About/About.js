@@ -3,27 +3,17 @@ import "./About.scss";
 import parse from "html-react-parser";
 
 const About = (props) => {
-  let mission = "";
-  let plan = "";
-  let mainImg = "";
-  let secondImg = "";
-  let backgroundColor;
-  if (props.data.main_content) {
-    mission = props.data.main_content;
-    mission = parse(mission);
-    mainImg = props.data.image_1.sizes.large;
-  }
-  if (props.data.secondary_content) {
-    plan = props.data.secondary_content;
-    plan = parse(plan);
-    console.log(plan[2].props.children);
-    secondImg = props.data.image_2.sizes.medium_large;
-  }
-  if (props.data.primary_color) {
-    backgroundColor = {
-      backgroundColor: `${props.data.primary_color}`,
-    };
-  }
+  let mission = props.data.main_content;
+  mission = parse(mission);
+  let mainImg = props.data.image_1.sizes.large;
+  let plan = props.data.secondary_content;
+  plan = parse(plan);
+  console.log(plan[2].props.children);
+  let secondImg = props.data.image_2.sizes.large;
+  let backgroundColor = {
+    backgroundColor: `${props.data.primary_color}`,
+  };
+
   return (
     <section className="about">
       <div className="container" style={backgroundColor}>

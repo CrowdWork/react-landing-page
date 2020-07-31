@@ -4,21 +4,30 @@ import NavBar from "./Sections/NavBar/NavBar.js";
 import Donate from "./Sections/Donate/Donate.js";
 import Contribute from "./Sections/Contribute/Contribute.js";
 import About from "./Sections/About/About.js";
+import Contact from "./Sections/Contact/Contact.js";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: {},
+      loading: null,
     };
   }
 
   componentDidMount() {
-    fetch("https://campaigns.crowdwork.coop/wp-json/wp/v2/fundraiser/342")
+    let baseUrl =
+      "https://campaigns.crowdwork.coop/wp-json/wp/v2/fundraiser/342";
+    fetch(baseUrl)
       .then((res) =>
-        res.json().then((data) => this.setState({ data: data.acf }))
+        res
+          .json()
+          .then((data) => this.setState({ data: data.acf, loading: true }))
       )
-      .then();
+      .catch((err) => {
+        console.log(err);
+        this.setState({ loading: false });
+      });
   }
 
   render() {
@@ -30,18 +39,25 @@ class App extends Component {
     } else {
       overlay = null;
     }
-    return (
-      <div className="App">
-        <div style={overlay} className="image-overlay">
-          <div className="color-overlay">
-            <NavBar />
-            <Donate data={this.state.data} />
-            <Contribute />
+    if (this.state.loading === true) {
+      return (
+        <div className="App">
+          <div style={overlay} className="image-overlay">
+            <div className="color-overlay">
+              <NavBar link={this.state.data.website} />
+              <Donate data={this.state.data} />
+              <Contribute />
+            </div>
           </div>
+          <About data={this.state.data} />
+          <Contact info={this.state.data.profile_details} />
         </div>
-        <About data={this.state.data} />
-      </div>
-    );
+      );
+    } else if (this.state.loading === null) {
+      return <div className="App">Loading...</div>;
+    } else {
+      return <div className="App">Oops, something went wrong</div>;
+    }
   }
 }
 

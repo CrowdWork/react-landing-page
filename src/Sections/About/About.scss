@@ -20,10 +20,16 @@
       }
     }
     .plan {
+      @include flex(space-between, center, row);
+      padding: 20px;
       &-content {
+        width: 50%;
+        padding: 20px;
+        font-size: 16px;
         ul {
           li {
             list-style: none;
+            padding: 5px 0;
             &:before {
               content: "";
               display: inline-block;
@@ -32,9 +38,13 @@
               background-image: url("https://img.icons8.com/ios-filled/50/000000/checkmark.png");
               background-size: contain;
               background-repeat: no-repeat;
+              margin-right: 10px;
             }
           }
         }
+      }
+      &-image {
+        width: 48%;
       }
     }
   }

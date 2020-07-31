@@ -7,11 +7,10 @@
   color: black;
   .container {
     width: 1000px;
-    @include flex(space-around, center, row);
+    @include flex(space-around, stretch, row);
+    // align-content: stretch;
     .column {
       background-color: white;
-      min-height: 450px;
-      height: 100%;
       width: 33.3333%;
       p {
         text-align: center;

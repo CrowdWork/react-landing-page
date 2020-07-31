@@ -6,7 +6,7 @@ const NavBar = (props) => {
     <nav>
       <a
         className="link-container"
-        href="https://communitygrocerycooperative.wordpress.com/"
+        href={props.link}
         target="_blank"
         rel="noopener noreferrer"
       >
