@@ -37,7 +37,7 @@ const Contact = (props) => {
         </a>
       </p>
       <div className="crowdwork">
-        <img src={cwLogo}></img>
+        <img src={cwLogo} alt="crowdwork logo"></img>
         <p>powered by crowdwork.coop</p>
       </div>
       <footer>
