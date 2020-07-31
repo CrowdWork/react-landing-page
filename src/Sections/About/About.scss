@@ -1,0 +1,49 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.about {
+  color: black;
+  @include flex(center, center, row);
+  .container {
+    width: 1000px;
+    .mission {
+      @include flex(space-between, center, row);
+      padding: 20px;
+      &-content {
+        width: 60%;
+        // @include flex(center, center, column);
+        font-size: 18px;
+        padding: 20px;
+      }
+      &-image {
+        width: 38%;
+      }
+    }
+    .plan {
+      &-content {
+        ul {
+          li {
+            list-style: none;
+            &:before {
+              content: "";
+              display: inline-block;
+              height: 10px;
+              width: 10px;
+              background-image: url("https://img.icons8.com/ios-filled/50/000000/checkmark.png");
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-content {
+  background-image: linear-gradient(white, #f7eed0);
+  border-radius: $bubble-radius;
+}
+.about-image {
+  box-shadow: $shadow;
+}

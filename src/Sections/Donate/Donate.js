@@ -7,10 +7,17 @@ import Modal from "../../Components/Modal/Modal.js";
 const Donate = (props) => {
   let raised = "";
   let goal = "";
+  let buttons;
 
   if (props.data.donation_details) {
     goal = `$${props.data.donation_details.goal}`;
     raised = `$${props.data.donation_details.amount_raised}`;
+    let socialLinks = props.data.share;
+    console.log(socialLinks);
+
+    buttons = Object.entries(socialLinks).map(([key, value]) => {
+      return <Button key={key.id} type={key} link={value} social />;
+    });
   }
   return (
     <section className="donate">
@@ -48,7 +55,7 @@ const Donate = (props) => {
         <div className="column third">
           <h2>Please Forward Along to Your Networks!</h2>
           <div className="social-container">
-            <Button
+            {/* <Button
               type="Facebook"
               link="https://www.facebook.com/sharer.php?u=https://campaigns.crowdwork.coop/community-grocery-cooperative"
               social
@@ -72,7 +79,8 @@ const Donate = (props) => {
               type="WhatsApp"
               link="https://api.whatsapp.com/send?text=*Community%20Grocery%20Cooperative%20%E2%80%93%20Crowdfunding%20Campaigns*https://campaigns.crowdwork.coop/community-grocery-cooperative"
               social
-            />
+            /> */}
+            {buttons}
           </div>
         </div>
       </div>

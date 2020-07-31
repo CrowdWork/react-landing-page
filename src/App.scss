@@ -10,6 +10,7 @@ a {
   color: inherit !important;
 }
 .App {
+  font-family: Helvetica, Arial, sans-serif;
   // background-color: #736020;
   .image-overlay {
     @include background(cover, 50% 10%);

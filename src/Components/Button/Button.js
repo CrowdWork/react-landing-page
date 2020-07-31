@@ -5,13 +5,14 @@ const Button = (props) => {
   const [hover, toggleHover] = useState(false);
   let classList = "button";
   let icon;
-  let type = props.type.toLowerCase();
+  let type = props.type.split("_")[2];
+  console.log(type);
   classList += ` ${type}-btn`;
 
-  if (props.type === "Email") {
+  if (type === "email") {
     icon = "mail-outline";
   } else {
-    icon = `logo-${props.type}`;
+    icon = `logo-${type}`;
   }
   if (hover) {
     classList += " test";
@@ -33,12 +34,11 @@ const Button = (props) => {
       onMouseEnter={() => toggleHover(true)}
       onMouseLeave={() => toggleHover(false)}
     >
-      {/* {hover ? <div className="hover-overlay"></div> : null} */}
       <div className="social">
         <span className="social-icon">
           <ion-icon name={icon}></ion-icon>
         </span>
-        <span className="social-name"> {props.type}</span>
+        <span className="social-name"> {type}</span>
       </div>
     </a>
   );

@@ -4,6 +4,7 @@
 .donate {
   box-shadow: $shadow;
   @include flex(center, center, row);
+  color: black;
   .container {
     width: 1000px;
     @include flex(space-around, center, row);

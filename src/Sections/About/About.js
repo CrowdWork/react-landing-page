@@ -7,33 +7,40 @@ const About = (props) => {
   let plan = "";
   let mainImg = "";
   let secondImg = "";
+  let backgroundColor;
   if (props.data.main_content) {
     mission = props.data.main_content;
     mission = parse(mission);
-    console.log(mission);
-    mainImg = props.data.image_1.sizes.medium;
+    mainImg = props.data.image_1.sizes.large;
   }
   if (props.data.secondary_content) {
     plan = props.data.secondary_content;
     plan = parse(plan);
-    console.log(plan);
+    console.log(plan[2].props.children);
     secondImg = props.data.image_2.sizes.medium_large;
+  }
+  if (props.data.primary_color) {
+    backgroundColor = {
+      backgroundColor: `${props.data.primary_color}`,
+    };
   }
   return (
     <section className="about">
-      <div className="mission">
-        <div className="mission-content">{mission}</div>
-        <div className="mission-image">
-          <img src={mainImg} alt="Campaign Main"></img>
+      <div className="container" style={backgroundColor}>
+        <div className="mission">
+          <div className="about-content mission-content">{mission}</div>
+          <div className="about-image mission-image">
+            <img src={mainImg} alt="Campaign Main"></img>
+          </div>
         </div>
-      </div>
-      <div className="plan">
-        <div className="plan-image">
-          <img src={secondImg} alt="Campaign Secondary"></img>
+        <div className="plan">
+          <div className="about-image plan-image">
+            <img src={secondImg} alt="Campaign Secondary"></img>
+          </div>
+          <div className="about-content plan-content">{plan}</div>
         </div>
-        <div className="plan-content">{plan}</div>
+        <div className="media"></div>
       </div>
-      <div className="media"></div>
     </section>
   );
 };
