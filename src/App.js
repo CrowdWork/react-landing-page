@@ -16,9 +16,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    let baseUrl =
-      "https://campaigns.crowdwork.coop/wp-json/wp/v2/fundraiser/342";
-    fetch(baseUrl)
+    let baseUrl = "https://campaigns.crowdwork.coop/wp-json/wp/v2/fundraiser/";
+    let cgc = "342";
+    let secondaryCampaign = "378";
+    fetch(baseUrl + secondaryCampaign)
       .then((res) =>
         res
           .json()
@@ -49,7 +50,7 @@ class App extends Component {
               <Contribute />
             </div>
           </div>
-          <About data={this.state.data} />
+          {/* <About data={this.state.data} /> */}
           <Contact info={this.state.data.profile_details} />
         </div>
       );

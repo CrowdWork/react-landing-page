@@ -8,7 +8,7 @@ const Donate = (props) => {
   let goal = `$${props.data.donation_details.goal}`;
   let buttons = Object.entries(props.data.share).map(([key, value]) => {
     if (!value) {
-      return <Button key={key.id} type={key} link={value} social />;
+      return <Button key={key} type={key} link={value} social />;
     } else {
       return null;
     }

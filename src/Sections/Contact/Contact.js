@@ -9,7 +9,7 @@ const Contact = (props) => {
       if (key !== "email" && value) {
         return (
           <a
-            key={key.id}
+            key={key}
             href={value}
             target="_blank"
             rel="noopener noreferrer"

@@ -19,7 +19,7 @@
     .first {
       @include flex(center, center, column);
       .logo-container {
-        width: 90%;
+        width: 300px;
         img {
           width: 100%;
         }
@@ -34,7 +34,7 @@
       }
     }
     .second {
-      @include flex(space-evenly, flex-start, column);
+      @include flex(space-evenly, center, column);
       .goal {
         span {
           color: #24a45a;
@@ -84,6 +84,26 @@
       }
       .social-container > * {
         margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .donate {
+    .container {
+      width: 90%;
+      @include flex(stretch, center, column);
+      .column {
+        width: 100%;
+      }
+      .second {
+        height: 400px;
+      }
+      .third {
+        .social-container {
+          margin: 0 auto;
+        }
       }
     }
   }

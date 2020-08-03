@@ -45,6 +45,7 @@ $(function () {
   var elements = stripe.elements();
 
   var card = elements.create("card", { style: style });
+
   card.mount("#card-element");
   card.on("change", ({ error }) => {
     const displayError = document.getElementById("card-errors");

@@ -13,6 +13,8 @@ const About = (props) => {
   let backgroundColor = {
     backgroundColor: `${props.data.primary_color}`,
   };
+  let video = parse(props.data.video);
+  console.log(video);
 
   return (
     <section className="about">
@@ -29,7 +31,7 @@ const About = (props) => {
           </div>
           <div className="about-content plan-content">{plan}</div>
         </div>
-        <div className="media"></div>
+        <div className="media">{video}</div>
       </div>
     </section>
   );
