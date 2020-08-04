@@ -6,19 +6,60 @@ export default class Modal extends Component {
     this.state = {
       oneTime: true,
       recurring: false,
+      overheadChecked: false,
+      threePercentChecked: false,
+      sixPercentChecked: false,
       threePercentAmount: "",
       sixPercentAmount: "",
     };
   }
 
   handleCheck = (e) => {
-    this.setState({
-      oneTime: !this.state.oneTime,
-      recurring: !this.state.recurring,
-    });
+    if (e.target.name === "onetime" || e.target.name === "recurring") {
+      this.setState({
+        oneTime: !this.state.oneTime,
+        recurring: !this.state.recurring,
+      });
+    }
+    if (e.target.name === "threepercent") {
+      if (!this.state.threePercentChecked) {
+        this.setState({ threePercentChecked: true });
+        if (this.state.sixPercentChecked) {
+          this.setState({ sixPercentChecked: false });
+        }
+      } else {
+        this.setState({ threePercentChecked: false });
+      }
+    }
+    if (e.target.name === "sixpercent") {
+      if (!this.state.sixPercentChecked) {
+        this.setState({ sixPercentChecked: true });
+        if (this.state.threePercentChecked) {
+          this.setState({ threePercentChecked: false });
+        }
+      } else {
+        this.setState({ sixPercentChecked: false });
+      }
+    }
   };
 
-  calculateOverhead = (e) => {};
+  calculateOverhead = (e) => {
+    if (!e.target.value) {
+      this.setState({
+        threePercentAmount: "",
+        sixPercentAmount: "",
+      });
+    } else {
+      let threePercentAmount = `$${(parseInt(e.target.value) * 1.03).toFixed(
+        2
+      )}`;
+      let sixPercentAmount = `$${(parseInt(e.target.value) * 1.06).toFixed(2)}`;
+      this.setState({
+        threePercentAmount: threePercentAmount,
+        sixPercentAmount: sixPercentAmount,
+      });
+    }
+  };
   render() {
     return (
       <>
@@ -105,8 +146,9 @@ export default class Modal extends Component {
                 name="donationamnt"
                 id="donationamnt"
                 number="true"
-                type="number"
+                type="text"
                 placeholder="Donation Amount"
+                onChange={this.calculateOverhead}
               />
 
               <div className="supportecosystem">
@@ -118,7 +160,9 @@ export default class Modal extends Component {
                   <input
                     className="uk-checkbox"
                     type="checkbox"
-                    name="recurring"
+                    name="threepercent"
+                    checked={this.state.threePercentChecked}
+                    onChange={this.handleCheck}
                   />
                   <label id="threepercent_lbl">
                     {" "}
@@ -130,6 +174,8 @@ export default class Modal extends Component {
                     className="uk-checkbox"
                     type="checkbox"
                     name="sixpercent"
+                    checked={this.state.sixPercentChecked}
+                    onChange={this.handleCheck}
                   />
                   <label id="sixpercent_lbl">
                     {" "}

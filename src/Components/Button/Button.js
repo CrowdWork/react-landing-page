@@ -6,7 +6,6 @@ const Button = (props) => {
   let classList = "button";
   let icon;
   let type = props.type.split("_")[2];
-  console.log(type);
   classList += ` ${type}-btn`;
 
   if (type === "email") {
