@@ -6,7 +6,7 @@ export default class Modal extends Component {
     this.state = {
       oneTime: true,
       recurring: false,
-      overheadChecked: false,
+      timeBank: false,
       threePercentChecked: false,
       sixPercentChecked: false,
       threePercentAmount: "",
@@ -19,6 +19,11 @@ export default class Modal extends Component {
       this.setState({
         oneTime: !this.state.oneTime,
         recurring: !this.state.recurring,
+      });
+    }
+    if (e.target.name === "timebank") {
+      this.setState({
+        timeBank: !this.state.timeBank,
       });
     }
     if (e.target.name === "threepercent") {
@@ -61,6 +66,20 @@ export default class Modal extends Component {
     }
   };
   render() {
+    let timeBankCredit;
+    if (this.state.timeBank) {
+      timeBankCredit = (
+        <div className="uk-margin timebankcredit">
+          <input
+            className="uk-input"
+            name="donatedcredits"
+            number="true"
+            type="text"
+            placeholder="Number of TimeCredits You Wish to Donate"
+          />
+        </div>
+      );
+    }
     return (
       <>
         <button
@@ -124,21 +143,13 @@ export default class Modal extends Component {
                     id="timebank"
                     type="checkbox"
                     name="timebank"
+                    onChange={this.handleCheck}
                     uk-tooltip="title: Timebanking is a labor-time based bartering system, where people exchange services for hourly time credits, rather than money; pos: bottom-left"
                   />
                   TimeBank-Credit
                 </label>
               </div>
-
-              <div className="uk-margin timebankcredit">
-                <input
-                  className="uk-input"
-                  name="donatedcredits"
-                  number="true"
-                  type="text"
-                  placeholder="Number of TimeCredits You Wish to Donate"
-                />
-              </div>
+              {timeBankCredit}
 
               <hr className="uk-divider-icon" />
               <input
@@ -146,7 +157,7 @@ export default class Modal extends Component {
                 name="donationamnt"
                 id="donationamnt"
                 number="true"
-                type="text"
+                type="number"
                 placeholder="Donation Amount"
                 onChange={this.calculateOverhead}
               />
