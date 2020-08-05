@@ -29,7 +29,6 @@ const About = (props) => {
           </div>
           <div className="about-content plan-content">{plan}</div>
         </div>
-        <div className="media"></div>
       </div>
     </section>
   );

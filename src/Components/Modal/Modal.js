@@ -80,6 +80,27 @@ export default class Modal extends Component {
         </div>
       );
     }
+    let donorButton;
+    if (this.state.oneTime) {
+      donorButton = (
+        <button
+          id="card-button"
+          className="uk-button uk-align-center onetimebtn"
+        >
+          Submit One-Time Donation
+        </button>
+      );
+    }
+    if (this.state.recurring) {
+      donorButton = (
+        <button
+          type="submit"
+          className="uk-button uk-align-center sustainingbtn"
+        >
+          Become A Sustaining Donor
+        </button>
+      );
+    }
     return (
       <>
         <button
@@ -215,23 +236,12 @@ export default class Modal extends Component {
               <div id="payment-form">
                 {/* <!-- We'll put the error messages in this element --> */}
                 <div id="card-errors" role="alert">
-                  <button
-                    type="submit"
-                    className="uk-button uk-align-center sustainingbtn"
-                  >
-                    Become A Sustaining Donor
-                  </button>
+                  {donorButton}
 
                   <div id="card-element">
                     {/* <!-- placeholder for Elements --> */}
                   </div>
                   <div id="card-errors" role="alert"></div>
-                  <button
-                    id="card-button"
-                    className="uk-button uk-align-center onetimebtn"
-                  >
-                    Submit One-Time Donation
-                  </button>
                   <p id="payment-result">
                     {/* <!-- we'll pass the response from the server here --> */}
                   </p>

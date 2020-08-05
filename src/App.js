@@ -5,6 +5,7 @@ import Donate from "./Sections/Donate/Donate.js";
 import Contribute from "./Sections/Contribute/Contribute.js";
 import About from "./Sections/About/About.js";
 import Contact from "./Sections/Contact/Contact.js";
+import Video from "./Sections/Video/Video.js";
 
 class App extends Component {
   constructor(props) {
@@ -16,9 +17,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    let baseUrl =
-      "https://campaigns.crowdwork.coop/wp-json/wp/v2/fundraiser/342";
-    fetch(baseUrl)
+    let baseUrl = "https://campaigns.crowdwork.coop/wp-json/wp/v2/fundraiser/";
+    let cgc = "342";
+    let earthBound = "378";
+    fetch(baseUrl + earthBound)
       .then((res) =>
         res
           .json()
@@ -45,6 +47,11 @@ class App extends Component {
           <div style={overlay} className="image-overlay">
             <div className="color-overlay">
               <NavBar link={this.state.data.website} />
+              <Video
+                video={this.state.data.video}
+                campaign={this.state.data.post_title}
+                background={this.state.data.secondary_color}
+              />
               <Donate data={this.state.data} />
               <Contribute />
             </div>
