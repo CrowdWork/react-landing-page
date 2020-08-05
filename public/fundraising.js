@@ -44,14 +44,14 @@ $(function () {
 
   var elements = stripe.elements();
 
-  var card = elements.create("card", { style: style });
-  card.mount("#card-element");
-  card.on("change", ({ error }) => {
-    const displayError = document.getElementById("card-errors");
-    if (error) {
-      displayError.textContent = error.message;
-    } else {
-      displayError.textContent = "";
-    }
-  });
+  // var card = elements.create("card", { style: style });
+  // card.mount("#card-element");
+  // card.on("change", ({ error }) => {
+  //   const displayError = document.getElementById("card-errors");
+  //   if (error) {
+  //     displayError.textContent = error.message;
+  //   } else {
+  //     displayError.textContent = "";
+  //   }
+  // });
 });

@@ -6,9 +6,10 @@
   width: 80%;
   border-radius: $rounded-radius;
   color: white !important;
-  font-weight: 600;
+  font-weight: 600 !important;
   height: 45px;
   overflow: hidden;
+  text-align: left;
   cursor: pointer;
 }
 
@@ -17,15 +18,14 @@
   text-align: center;
   background-color: #c50101;
   letter-spacing: 0.1rem;
-  box-shadow: $shadow;
+  box-shadow: none;
+  border: none;
+  &:hover {
+    box-shadow: $shadow;
+  }
   @include flex(center, center, row);
 }
-.hover-overlay {
-  background-color: rgba(255, 255, 255, 0.125);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
+
 .social {
   @include flex(flex-start, center, row);
   height: 100%;
@@ -34,7 +34,7 @@
 }
 
 .social-icon {
-  width: 20%;
+  width: 50px;
   height: 100%;
   @include flex(center, center, row);
   ion-icon {
@@ -43,57 +43,47 @@
 }
 
 .social-name {
-  width: 80%;
   padding-left: 15px;
 }
 
 .facebook-btn {
-  background-color: #3a5691;
+  background-color: #3a5691 !important;
   transition: 0.3s;
   &:hover {
-    background-color: #3b5996;
-  }
-  .social-icon {
-    background-color: #3b5996;
+    background-color: #48649b !important;
   }
 }
 .twitter-btn {
-  background-color: #1a9be7;
+  background-color: #1a9be7 !important;
   transition: 0.3s;
   &:hover {
-    background-color: #1ca2ef;
-  }
-  .social-icon {
-    background-color: #1ca2ef;
+    background-color: #3babeb !important;
   }
 }
 .email-btn {
-  background-color: #ea4335;
+  background-color: #ff1500 !important;
   transition: 0.3s;
   &:hover {
-    background-color: #ff1500;
-  }
-  .social-icon {
-    background-color: #ff1500;
+    background-color: #ea4335 !important;
   }
 }
 .linkedin-btn {
-  background-color: #0077b5;
+  background-color: #0077b5 !important;
   transition: 0.3s;
   &:hover {
-    background-color: #0086ce;
-  }
-  .social-icon {
-    background-color: #0086ce;
+    background-color: #0086ce !important;
   }
 }
 .whatsapp-btn {
-  background-color: #1fae53;
+  background-color: #1fae53 !important;
   transition: 0.3s;
   &:hover {
-    background-color: #25d36d;
+    background-color: #25d36d !important;
   }
-  .social-icon {
-    background-color: #25d36d;
+}
+
+@include tablet {
+  .social {
+    @include flex(flex-start, center, row);
   }
 }

@@ -2,16 +2,13 @@
 @import "../../variables.scss";
 
 .contribute {
-  box-shadow: $shadow;
   @include flex(center, center, row);
   margin: 20px 0;
-  .container {
+  box-shadow: $shadow;
+  .contribute-container {
     width: 1000px;
     height: 100%;
-    @include flex(space-around, center, row);
-    .column {
-      min-height: 600px;
-    }
+    @include flex(space-around, stretch, row);
     .contributors {
       @include flex(flex-start, flex-start, column);
       width: 25%;
@@ -44,6 +41,17 @@
 }
 
 @include tablet {
+<<<<<<< HEAD
   .container {
+=======
+  .contribute {
+    .contribute-container {
+      @include flex(center, center, column);
+      width: 90vw;
+    }
+    .column {
+      width: 100% !important;
+    }
+>>>>>>> 34a7867a1fc98e9e4d5f34d5d42ff3a0cac637ac
   }
 }

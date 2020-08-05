@@ -4,7 +4,8 @@
 .about {
   color: black;
   @include flex(center, center, row);
-  .container {
+  box-shadow: $shadow;
+  .about-container {
     width: 1000px;
     .mission {
       @include flex(space-between, center, row);
@@ -25,7 +26,7 @@
       &-content {
         width: 50%;
         padding: 20px;
-        font-size: 16px;
+        font-size: 18px;
         ul {
           li {
             list-style: none;
@@ -56,4 +57,64 @@
 }
 .about-image {
   box-shadow: $shadow;
+}
+
+@include tablet {
+  .about {
+    .about-container {
+      width: 90vw;
+      .mission {
+        @include flex(space-between, space-between, column);
+        &-content {
+          align-self: flex-start;
+          width: 80%;
+          margin-bottom: 20px;
+          font-size: 16px;
+          padding: 10px;
+        }
+        &-image {
+          align-self: flex-end;
+          width: 60%;
+        }
+      }
+      .plan {
+        @include flex(space-between, space-between, column);
+        &-content {
+          align-self: flex-end;
+          width: 80%;
+          margin-bottom: 20px;
+          font-size: 16px;
+          padding: 10px;
+        }
+        &-image {
+          align-self: flex-start;
+          width: 60%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .about {
+    .about-container {
+      .mission {
+        &-content {
+          width: 100%;
+        }
+        &-image {
+          width: 80%;
+        }
+      }
+      .plan {
+        &-content {
+          width: 100%;
+        }
+        &-image {
+          width: 80%;
+        }
+      }
+    }
+  }
 }

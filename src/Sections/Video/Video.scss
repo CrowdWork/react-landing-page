@@ -1,0 +1,47 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.video {
+  @include flex(center, center, row);
+  box-shadow: $shadow;
+  margin-bottom: 20px;
+  .video-container {
+    padding: 20px;
+    width: 1000px;
+    @include flex(center, center, column);
+    h1 {
+      text-transform: uppercase;
+      text-align: center;
+      color: white;
+    }
+  }
+}
+
+@include tablet {
+  .video {
+    .video-container {
+      width: 90vw;
+      h1 {
+        font-size: 30px;
+      }
+      iframe {
+        width: 450px;
+        height: 280px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .video {
+    .video-container {
+      h1 {
+        font-size: 22px;
+      }
+      iframe {
+        width: 280px;
+        height: 200px;
+      }
+    }
+  }
+}

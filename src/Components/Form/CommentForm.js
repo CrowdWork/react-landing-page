@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Form.scss";
+import "./CommentForm.scss";
 import Check from "../../Images/check.svg";
 
 export default class Form extends Component {

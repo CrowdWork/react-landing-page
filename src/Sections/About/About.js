@@ -8,7 +8,6 @@ const About = (props) => {
   let mainImg = props.data.image_1.sizes.large;
   let plan = props.data.secondary_content;
   plan = parse(plan);
-  console.log(plan[2].props.children);
   let secondImg = props.data.image_2.sizes.large;
   let backgroundColor = {
     backgroundColor: `${props.data.primary_color}`,
@@ -18,7 +17,7 @@ const About = (props) => {
 
   return (
     <section className="about">
-      <div className="container" style={backgroundColor}>
+      <div className="about-container" style={backgroundColor}>
         <div className="mission">
           <div className="about-content mission-content">{mission}</div>
           <div className="about-image mission-image">
@@ -31,7 +30,10 @@ const About = (props) => {
           </div>
           <div className="about-content plan-content">{plan}</div>
         </div>
-        <div className="media">{video}</div>
+        <div className="test">
+          <div className="box" id="two"></div>
+          <div className="box" id="one"></div>
+        </div>
       </div>
     </section>
   );
