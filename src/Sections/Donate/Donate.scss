@@ -21,12 +21,8 @@
       // padding: 10px;
       @include flex(center, center, column);
       .logo-container {
-<<<<<<< HEAD
-        width: 300px;
-=======
         margin-top: 20px;
         width: 90%;
->>>>>>> 34a7867a1fc98e9e4d5f34d5d42ff3a0cac637ac
         img {
           width: 100%;
         }
@@ -99,20 +95,6 @@
 
 @include tablet {
   .donate {
-<<<<<<< HEAD
-    .container {
-      width: 90%;
-      @include flex(stretch, center, column);
-      .column {
-        width: 100%;
-      }
-      .second {
-        height: 400px;
-      }
-      .third {
-        .social-container {
-          margin: 0 auto;
-=======
     .donate-container {
       @include flex(center, center, column);
       width: 90vw;
@@ -125,7 +107,6 @@
       .first {
         p {
           margin-top: 40px;
->>>>>>> 34a7867a1fc98e9e4d5f34d5d42ff3a0cac637ac
         }
       }
     }
