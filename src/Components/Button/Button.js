@@ -12,10 +12,6 @@ const Button = (props) => {
   let classList = "button";
   let icon;
   let type = props.type;
-  let disabledDefault = {
-    backgroundColor: "transparent",
-  };
-  // let type = props.type.split("_")[2];
   let typeClass = type.charAt(0).toLowerCase() + type.slice(1);
   classList += ` ${typeClass}-btn`;
 
