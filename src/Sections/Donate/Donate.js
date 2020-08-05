@@ -6,13 +6,6 @@ import Modal from "../../Components/Modal/Modal.js";
 const Donate = (props) => {
   let raised = `$${props.data.donation_details.amount_raised}`;
   let goal = `$${props.data.donation_details.goal}`;
-  let buttons = Object.entries(props.data.share).map(([key, value]) => {
-    if (!value) {
-      return <Button key={key.id} type={key} link={value} social />;
-    } else {
-      return null;
-    }
-  });
 
   return (
     <section className="donate">
@@ -42,7 +35,17 @@ const Donate = (props) => {
         </div>
         <div className="donate-column third">
           <h2>Please Forward Along to Your Networks!</h2>
-          <div className="social-container">{buttons}</div>
+          <div className="social-container">
+            <Button type="Facebook" link={props.page} />
+            <Button type="Twitter" link={props.page} />
+            <Button type="Linkedin" link={props.page} />
+            <Button
+              type="Email"
+              link={props.page}
+              campaign={props.data.post_title}
+            />
+            <Button type="Whatsapp" link={props.page} />
+          </div>
         </div>
       </div>
     </section>

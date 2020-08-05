@@ -18,8 +18,10 @@
       }
     }
     .first {
+      // padding: 10px;
       @include flex(center, center, column);
       .logo-container {
+        margin-top: 20px;
         width: 90%;
         img {
           width: 100%;
@@ -29,6 +31,7 @@
         strong {
           font-weight: 700;
         }
+        margin-top: 40px;
         width: 80%;
         font-weight: 600;
         transform: translateY(-50%);

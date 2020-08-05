@@ -8,7 +8,6 @@ const About = (props) => {
   let mainImg = props.data.image_1.sizes.large;
   let plan = props.data.secondary_content;
   plan = parse(plan);
-  console.log(plan[2].props.children);
   let secondImg = props.data.image_2.sizes.large;
   let backgroundColor = {
     backgroundColor: `${props.data.primary_color}`,

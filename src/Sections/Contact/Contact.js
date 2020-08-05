@@ -3,7 +3,6 @@ import "./Contact.scss";
 import cwLogo from "../../Images/crowdwork_logo.png";
 
 const Contact = (props) => {
-  console.log(props.info);
   let socialLinks = Object.entries(props.info.social_media).map(
     ([key, value]) => {
       if (key !== "email" && value) {

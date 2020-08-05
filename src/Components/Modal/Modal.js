@@ -1,4 +1,9 @@
 import React, { Component } from "react";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import { CardElement } from "@stripe/react-stripe-js";
+
+const stripePromise = loadStripe("pk_test_JJ1eMdKN0Hp4UFJ6kWXWO4ix00jtXzq5XG");
 
 export default class Modal extends Component {
   constructor(props) {
@@ -233,6 +238,9 @@ export default class Modal extends Component {
                   {/* <!-- Elements will create input elements here --> */}
                 </div>
               </div>
+              <Elements stripe={stripePromise}>
+                <CardElement />
+              </Elements>
               <div id="payment-form">
                 {/* <!-- We'll put the error messages in this element --> */}
                 <div id="card-errors" role="alert">

@@ -12,6 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       data: {},
+      pageUrl: "",
       loading: null,
     };
   }
@@ -24,7 +25,9 @@ class App extends Component {
       .then((res) =>
         res
           .json()
-          .then((data) => this.setState({ data: data.acf, loading: true }))
+          .then((data) =>
+            this.setState({ data: data.acf, loading: true, pageUrl: data.link })
+          )
       )
       .catch((err) => {
         console.log(err);
@@ -52,7 +55,7 @@ class App extends Component {
                 campaign={this.state.data.post_title}
                 background={this.state.data.secondary_color}
               />
-              <Donate data={this.state.data} />
+              <Donate data={this.state.data} page={this.state.pageUrl} />
               <About data={this.state.data} />
               <Contribute />
             </div>
