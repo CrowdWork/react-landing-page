@@ -5,12 +5,13 @@
   @include flex(center, center, row);
   box-shadow: $shadow;
   margin-bottom: 20px;
-  .container {
+  .video-container {
     padding: 20px;
     width: 1000px;
     @include flex(center, center, column);
     h1 {
       text-transform: uppercase;
+      text-align: center;
       color: white;
     }
   }
@@ -18,7 +19,7 @@
 
 @include tablet {
   .video {
-    .container {
+    .video-container {
       width: 90vw;
       h1 {
         font-size: 30px;
@@ -33,7 +34,7 @@
 
 @include mobile {
   .video {
-    .container {
+    .video-container {
       h1 {
         font-size: 22px;
       }

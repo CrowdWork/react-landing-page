@@ -49,7 +49,7 @@ class App extends Component {
         <div className="App">
           <div style={overlay} className="image-overlay">
             <div className="color-overlay">
-              <NavBar link={this.state.data.website} />
+              <NavBar link={this.state.data.profile_details.website} />
               <Video
                 video={this.state.data.video}
                 campaign={this.state.data.post_title}

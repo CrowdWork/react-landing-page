@@ -10,7 +10,7 @@ const Video = (props) => {
   };
   return (
     <div className="video">
-      <div className="container" style={backgroundStyle}>
+      <div className="video-container" style={backgroundStyle}>
         <h1>{props.campaign}</h1>
         {iFrame}
       </div>
