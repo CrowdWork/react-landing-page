@@ -19,7 +19,7 @@
 @include tablet {
   .video {
     .container {
-      width: 100vw;
+      width: 90vw;
       h1 {
         font-size: 30px;
       }
@@ -38,7 +38,7 @@
         font-size: 22px;
       }
       iframe {
-        width: 300px;
+        width: 280px;
         height: 200px;
       }
     }

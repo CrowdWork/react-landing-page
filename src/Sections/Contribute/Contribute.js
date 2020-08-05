@@ -1,12 +1,12 @@
 import React from "react";
 import "./Contribute.scss";
-import Form from "../../Components/Form/Form.js";
+import CommentForm from "../../Components/Form/CommentForm.js";
 import Sad from "../../Images/sad.svg";
 
 const Contribute = (props) => {
   return (
     <section className="contribute">
-      <div className="container">
+      <div className="contribute-container">
         <div className="contributors column">
           <h2>Contributors</h2>
           <em>
@@ -19,7 +19,7 @@ const Contribute = (props) => {
           </div>
           <p>No comments yet.</p>
         </div>
-        <Form />
+        <CommentForm />
       </div>
     </section>
   );

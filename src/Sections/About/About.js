@@ -16,7 +16,7 @@ const About = (props) => {
 
   return (
     <section className="about">
-      <div className="container" style={backgroundColor}>
+      <div className="about-container" style={backgroundColor}>
         <div className="mission">
           <div className="about-content mission-content">{mission}</div>
           <div className="about-image mission-image">
@@ -28,6 +28,10 @@ const About = (props) => {
             <img src={secondImg} alt="Campaign Secondary"></img>
           </div>
           <div className="about-content plan-content">{plan}</div>
+        </div>
+        <div className="test">
+          <div className="box" id="two"></div>
+          <div className="box" id="one"></div>
         </div>
       </div>
     </section>

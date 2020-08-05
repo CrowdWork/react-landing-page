@@ -72,3 +72,21 @@
 .social-linkedin {
   background-color: $linkedin-color;
 }
+
+@include mobile {
+  .contact {
+    font-size: 14px;
+  }
+  .crowdwork {
+    margin-top: 50px !important;
+    p {
+      font-size: 12px !important;
+    }
+  }
+  footer {
+    font-size: 16px !important;
+    em {
+      font-size: 14px !important;
+    }
+  }
+}

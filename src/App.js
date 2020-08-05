@@ -18,7 +18,7 @@ class App extends Component {
 
   componentDidMount() {
     let baseUrl = "https://campaigns.crowdwork.coop/wp-json/wp/v2/fundraiser/";
-    let cgc = "342";
+    // let cgc = "342";
     let earthBound = "378";
     fetch(baseUrl + earthBound)
       .then((res) =>
@@ -53,10 +53,10 @@ class App extends Component {
                 background={this.state.data.secondary_color}
               />
               <Donate data={this.state.data} />
+              <About data={this.state.data} />
               <Contribute />
             </div>
           </div>
-          <About data={this.state.data} />
           <Contact info={this.state.data.profile_details} />
         </div>
       );

@@ -5,11 +5,12 @@
   box-shadow: $shadow;
   @include flex(center, center, row);
   color: black;
-  .container {
+  margin-bottom: 20px;
+  .donate-container {
     width: 1000px;
     @include flex(space-around, stretch, row);
     // align-content: stretch;
-    .column {
+    .donate-column {
       background-color: white;
       width: 33.3333%;
       p {
@@ -34,7 +35,7 @@
       }
     }
     .second {
-      @include flex(space-evenly, flex-start, column);
+      @include flex(space-evenly, center, column);
       .goal {
         span {
           color: #24a45a;
@@ -84,6 +85,26 @@
       }
       .social-container > * {
         margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .donate {
+    .donate-container {
+      @include flex(center, center, column);
+      width: 90vw;
+      .donate-column {
+        width: 100%;
+      }
+      .second {
+        height: 350px;
+      }
+      .first {
+        p {
+          margin-top: 40px;
+        }
       }
     }
   }

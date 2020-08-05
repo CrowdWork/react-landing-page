@@ -16,17 +16,14 @@ const Donate = (props) => {
 
   return (
     <section className="donate">
-      <div className="container">
-        <div className="column first">
+      <div className="donate-container">
+        <div className="donate-column first">
           <div className="logo-container">
-            <img
-              src={props.data._thumbnail_id.sizes.medium}
-              alt="CGC Logo"
-            ></img>
+            <img src={props.data._thumbnail_id.sizes.medium} alt="Logo"></img>
           </div>
           <p>{props.data.tagline}</p>
         </div>
-        <div className="column second">
+        <div className="donate-column second">
           <h2 className="goal">
             Goal: <span>{goal ? goal : "$0"}</span>
           </h2>
@@ -43,7 +40,7 @@ const Donate = (props) => {
             </strong>
           </p>
         </div>
-        <div className="column third">
+        <div className="donate-column third">
           <h2>Please Forward Along to Your Networks!</h2>
           <div className="social-container">{buttons}</div>
         </div>
