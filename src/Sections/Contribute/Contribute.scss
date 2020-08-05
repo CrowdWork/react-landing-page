@@ -41,9 +41,6 @@
 }
 
 @include tablet {
-<<<<<<< HEAD
-  .container {
-=======
   .contribute {
     .contribute-container {
       @include flex(center, center, column);
@@ -52,6 +49,5 @@
     .column {
       width: 100% !important;
     }
->>>>>>> 34a7867a1fc98e9e4d5f34d5d42ff3a0cac637ac
   }
 }
