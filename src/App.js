@@ -13,14 +13,14 @@ class App extends Component {
     this.state = {
       data: {},
       pageUrl: "",
-      loading: null,
+      loading: null
     };
   }
 
   componentDidMount() {
-    let baseUrl = "https://campaigns.crowdwork.coop/wp-json/wp/v2/fundraiser/";
+    let baseUrl = "https://dcstakeholders.coop/wp-json/wp/v2/job_listing/";
     // let cgc = "342";
-    let earthBound = "378";
+    let earthBound = "37094";
     fetch(baseUrl + earthBound)
       .then((res) =>
         res
@@ -39,7 +39,7 @@ class App extends Component {
     let overlay;
     if (this.state.data.background_image) {
       overlay = {
-        backgroundImage: `url(${this.state.data.background_image.url})`,
+        backgroundImage: `url(${this.state.data.background_image.url})`
       };
     } else {
       overlay = null;
